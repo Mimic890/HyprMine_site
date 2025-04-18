@@ -1,1 +1,1 @@
-# HyprMine_site
+# HyprMine_Site
