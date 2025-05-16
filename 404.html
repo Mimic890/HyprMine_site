@@ -3,24 +3,105 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>404</title>
+  <title>404 - Страница не найдена</title>
   <link rel="stylesheet" href="/fonts/fonts.css">
   <style>
-    * {padding: 0;margin: 0;box-sizing: border-box;}
-    body, html {height: 100vh;}
-    .fone {position: absolute;top: 0;left: 0;width: 100%;height: 100%;object-fit: cover;z-index: -1;}
-    .block {display: flex;flex-direction: column;justify-content: center;align-items: center;background-color: rgb(34, 34, 34);padding: 50px;margin-top: 35vh;margin-right: 30vh;margin-left: 30vh;border-radius: 20px;text-align: center;}
-    h1 {font-size: 100px;color: #e73c3c;margin: 0;font-family: "mine";}
-    p {font-size: 18px;color: #7f8c8d;font-family: "mine";}
-    .button {display: inline-block;padding: 10px 20px;background-color: #db6034;color: #fff;text-decoration: none;border-radius: 5px;font-size: 16px;margin-top: 20px;transition: background-color 0.3s ease;font-family: "mine";}
-    .button:hover {background-color: #d2a51e;}
-  </style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body, html {
+    height: 100vh;
+    background-color: #222;
+    font-family: 'mine', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  #main {
+    background-color: #111;
+    width: 90%;
+    max-width: 1000px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+    animation: fadeIn 1s ease-in-out;
+    gap: 40px;
+  }
+  .text-block {
+    flex: 1;
+  }
+  .text-block p {
+    font-size: 96px;
+    font-weight: bold;
+    color: #ff6b6b;
+    margin-bottom: 10px;
+  }
+  .text-block small {
+    font-size: 18px;
+    color: #aaa;
+  }
+  .image-block {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .image-block img {
+    width: auto;
+    height: 90%;
+    max-height: 300px;
+    aspect-ratio: 16 / 9;
+    border-radius: 16px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  .image-block img:hover {
+    transform: scale(1.05);
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #db6034;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    font-family: "mine", sans-serif;
+  }
+  .button:hover {
+    background-color: #c5532c;
+  }
+  .text-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+</style>
 </head>
 <body>
-  <div class="block">
-    <h1>404</h1>
-    <a href="/index.html" class="button">main</a>
-    <img class="fone" src="/img/fone/">
+  <div id="main">
+    <div class="text-block">
+      <div class="text-inner">
+        <p>404</p>
+        <a href="/index.html" class="button">main</a>
+  </div>
+    </div>
+    <div class="image-block">
+      <img src="/img/okak.jpeg">
+    </div>
   </div>
 </body>
 </html>
