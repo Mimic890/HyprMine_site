@@ -1,6 +1,6 @@
 @font-face {
 	font-family: 'mine';
-	src: url('/fonts/mine.ttf') format('truetype');
+	src: url('mine.ttf') format('truetype');
 	font-weight: 500;
 	font-style: normal;
 }
